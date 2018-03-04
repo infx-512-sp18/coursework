@@ -24,7 +24,7 @@ module.exports = {
   ** This option is given directly to the vue-router Router constructor
   */
   router: {
-    base: '',
+    base: (process.env.DEPLOY_ENV === 'GH_PAGES') ? '/coursework/' : '',
     linkActiveClass: 'is-active'
   },
   /*
