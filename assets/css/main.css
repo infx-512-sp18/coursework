@@ -34,7 +34,12 @@ a.skip:focus, a.skip:active {
     z-index:999;
 }
 
-
-  p {
+main h1, main h2, main h3, main h4 {
   @apply .mt-4 .mb-4
+}
+p {
+  @apply .mt-4 .mb-4
+}
+main ul li {
+  @apply .leading-normal
 }
