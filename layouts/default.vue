@@ -58,7 +58,7 @@
       </div>
 
       <div class="w-full md:w-3/4 px-2">
-        <div class="overflow-hidden shadow-lg border-t-4 bg-white mb-4 rounded-b-lg rounded-t border-purple w-full my-3 p-3">
+        <div class="overflow-hidden shadow-lg border-t-4 bg-white mb-4 rounded-b-lg rounded-t border-purple w-full my-3 p-3 font-sans">
           <nuxt/>
         </div>
       </div>

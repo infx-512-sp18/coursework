@@ -35,10 +35,13 @@ a.skip:focus, a.skip:active {
 }
 
 main h1, main h2, main h3, main h4 {
-  @apply .mt-4 .mb-4
+  @apply .mt-6 .mb-2 .font-semibold
 }
-p {
-  @apply .mt-4 .mb-4
+main h3, main h4 {
+  @apply .font-medium
+}
+main p {
+  @apply .mt-4 .mb-4 .leading-normal
 }
 main ul li {
   @apply .leading-normal
