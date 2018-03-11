@@ -50,33 +50,51 @@
         <strong>.gitignore file:</strong> a file in your project's root directory that contains paths or specific files that git should ignore. This is very useful for keeping things out of the repository that should never be in there, such as current workspace settings saved by an Integrated Development Environment (IDE), or files containing login information or secret keys.</li>
     </ul>
 
-    <p><img src="~/static/images/github.png" alt="Diagram of GitHub code pushed and pulled from the server"></p>
+    <p><img :data-src="require('~/assets/managing-files/github.png')" src="~/assets/managing-files/github.png" alt="Diagram of GitHub code pushed and pulled from the server"></p>
 
     <h2>GitHub Desktop</h2>
 
     <p>Git can be used as a command line tool (see
       <nuxt-link to="/getting-setup">Getting setup page</nuxt-link>). In this course we will be using the GitHub Desktop application to manage our repositories, files and commits.</p>
 
-    <p><img src="~/static/images/github-desktop-screenshot-mac.png" alt="Screenshot of GitHub Desktop application"></p>
+    <p><img src="~/assets/managing-files/github-desktop-app.png" alt="Screenshot of GitHub Desktop application"></p>
 
     <h2>Getting setup</h2>
 
     <h3>Create a repo</h3>
 
+    <p><img src="~/assets/managing-files/github-create-repo.png" alt="Screenshot of creating a repository on GitHub"></p>
+
     <h3>Clone repo</h3>
 
+    <p><img src="~/assets/managing-files/github-clone-repo.png" alt="Screenshot of cloning a repository on GitHub"></p>
+
+    <p><img src="~/assets/managing-files/github-app-clone-repo.png" alt="Screenshot of clone repository dialog in GitHub app"></p>
+
     <h3>Open repo in editor</h3>
+
+    <p><img src="~/assets/managing-files/vscode-open-repo.png" alt="Screenshot of Visual Studio Code"></p>
 
     <h3>Create a
       <code>.gitignore</code> file</h3>
 
+    <p><img src="~/assets/managing-files/vscode-add-file.gif" alt="Animation of adding a file in VS Code"></p>
+
     <h3>Edit the README.md file</h3>
+
+    <p><img src="~/assets/managing-files/vscode-add-content.gif" alt="Adding content to the README file"></p>
 
     <h3>Commit changes</h3>
 
+    <p><img src="~/assets/managing-files/github-desktop-commit.gif" alt="Animation of how to commit with GitHub Desktop"></p>
+
     <h3>Sync with Github</h3>
 
+    <p><img src="~/assets/managing-files/github-desktop-push.gif" alt="Animation of how to push code with GitHub Desktop"></p>
+
     <h3>View changes on Github</h3>
+
+    <p><img src="~/assets/managing-files/github-view-changes.png" alt="Screenshot of a repository on GitHub"></p>
 
     <h3>Repeat</h3>
 
@@ -84,24 +102,55 @@
 
     <h3>Branching and Merging</h3>
 
+    <p><img src="~/assets/managing-files/github-desktop-branch.gif" alt="Animation of creating a branch in GitHub Desktop"></p>
+
+    <p>Once you have added content, commit those changes and publish them to GitHub.</p>
+
+    <p><img src="~/assets/managing-files/github-desktop-commit-to-branch.gif" alt="Animation of committing and publishing to GitHub"></p>
+
     <h3>Pull Requests</h3>
+
+    <p><img src="~/assets/managing-files/github-submit-pr.gif" alt="Animation of submitting a pull request"></p>
+
+    <h3>Merging in a pull request</h3>
+
+    <p><img src="~/assets/managing-files/github-merge-pr.gif" alt="Animation of merging in a pull request"></p>
+
+    <h3>Pull newest changes to your desktop</h3>
+
+    <p><img src="~/assets/managing-files/github-fetch-changes.gif" alt="Animation of fetching new changes from GitHub"></p>
 
     <h3>Keep Practicing</h3>
 
     <h2>Additional resources</h2>
     <ul>
       <li>
-        <a href="https://guides.github.com/activities/hello-world/">GitHub guides</a>
+        <a href="https://help.github.com/desktop/guides/contributing-to-projects/">GitHub Desktop how-to guides</a>
+      </li>
+      <li>
+        <a href="https://guides.github.com/activities/hello-world/">GitHub "Hello world" activity</a>
+      </li>
+      <li>
         <a href="https://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a>
+      </li>
+      <li>
+        <a href="https://code.visualstudio.com/docs/getstarted/introvideos">VSCode intro videos</a>
+      </li>
+      <li>
+        <a href="https://guides.github.com/features/mastering-markdown/">Markdown guide</a>
       </li>
     </ul>
   </main>
 </template>
 
 <script>
+// https://github.com/wesbos/JavaScript30/blob/master/13%20-%20Slide%20in%20on%20Scroll/index-FINISHED.html
 export default {
   head: {
     title: 'Managing files tutorial'
+  },
+  mounted() {
+    Prism.highlightAll()
   }
 }
 </script>

@@ -39,15 +39,11 @@
 
     <p>These tools can be downloaded from the website or installed via
       <a href="https://brew.sh/">Homebrew</a> (MacOS only) with the following commands:</p>
-    <p>
-      <pre class="text-sm m-0 p-0">
-        <code class="shell">
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+    <pre class="text-sm m-0 p-0"><code class="language-bash">$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ brew install node
-$ npm install -g browser-sync
-        </code>
-      </pre>
-    </p>
+$ npm install -g browser-sync</code></pre>
+
   </main>
 </template>
 
@@ -55,6 +51,9 @@ $ npm install -g browser-sync
 export default {
   head: {
     title: 'Getting setup tutorial'
+  },
+  mounted() {
+    Prism.highlightAll()
   }
 }
 </script>

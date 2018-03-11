@@ -81,3 +81,6 @@ html {
   font-family: config('fonts.sans');
 }
 </style>
+<script>
+export default {}
+</script>

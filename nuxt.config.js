@@ -15,7 +15,7 @@ module.exports = {
         rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'
       },
       {
-        rel: 'stylesheet', href: '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css'
+        rel: 'stylesheet', href: '/css/prism.css'
       },
       {
         rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i'
@@ -23,7 +23,7 @@ module.exports = {
     ],
     script: [
       {
-        src: '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js'
+        src: '/js/prism.js',
       }
     ]
   },
