@@ -74,7 +74,11 @@
     <h2 id="sec-htmlisatreeofelements">HTML is a Tree of Elements</h2>
     <p>The rest of an HTML document is a simple tree of
       <strong>elements</strong>. If you've taken a second-level computer science course, you should already know what a tree data structure is, but if you haven't (or if you forgot), a tree is a very common data structure that looks like this:</p>
-    <p><img src="img/tree.png" alt="tree data structure" /></p>
+    <p><img src="~/assets/encoding-html/html-tree.png" alt="tree data structure" /><br />
+      <em>Image source:
+        <a href="http://www.openbookproject.net/tutorials/getdown/css/lesson4.html">http://www.openbookproject.net/tutorials/getdown/css/lesson4.html</a>
+      </em>
+    </p>
     <p>Each of those blue rectangles is known as a
       <strong>node</strong>. Each node has a
       <strong>parent node</strong>, except for the one at the top of the tree, which is known as the

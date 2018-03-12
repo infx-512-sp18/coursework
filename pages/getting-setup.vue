@@ -38,7 +38,10 @@
       <a href="https://brew.sh/">Homebrew</a> (MacOS only) with the following commands:</p>
 
     <pre><code class="language-bash">$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-$ brew cask install google-chrome slack visual-studio-code github
+$ brew cask install google-chrome
+$ brew cask install slack
+$ brew cask install visual-studio-code
+$ brew cask install github
 $ brew install node</code></pre>
 
     <h2>Customizing VS Code</h2>
