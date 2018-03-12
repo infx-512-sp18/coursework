@@ -50,51 +50,51 @@
         <strong>.gitignore file:</strong> a file in your project's root directory that contains paths or specific files that git should ignore. This is very useful for keeping things out of the repository that should never be in there, such as current workspace settings saved by an Integrated Development Environment (IDE), or files containing login information or secret keys.</li>
     </ul>
 
-    <p><img :data-src="require('~/assets/managing-files/github.png')" src="~/assets/managing-files/github.png" alt="Diagram of GitHub code pushed and pulled from the server"></p>
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github.png')" src="/placeholder.gif" alt="Diagram of GitHub code pushed and pulled from the server"></p>
 
     <h2>GitHub Desktop</h2>
 
     <p>Git can be used as a command line tool (see
       <nuxt-link to="/getting-setup">Getting setup page</nuxt-link>). In this course we will be using the GitHub Desktop application to manage our repositories, files and commits.</p>
 
-    <p><img src="~/assets/managing-files/github-desktop-app.png" alt="Screenshot of GitHub Desktop application"></p>
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-desktop-app.png')" src="/placeholder.gif" alt="Screenshot of GitHub Desktop application"></p>
 
     <h2>Getting setup</h2>
 
     <h3>Create a repo</h3>
 
-    <p><img src="~/assets/managing-files/github-create-repo.png" alt="Screenshot of creating a repository on GitHub"></p>
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-create-repo.png')" src="/placeholder.gif" alt="Screenshot of creating a repository on GitHub"></p>
 
     <h3>Clone repo</h3>
 
-    <p><img src="~/assets/managing-files/github-clone-repo.png" alt="Screenshot of cloning a repository on GitHub"></p>
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-clone-repo.png')" src="/placeholder.gif" alt="Screenshot of cloning a repository on GitHub"></p>
 
-    <p><img src="~/assets/managing-files/github-app-clone-repo.png" alt="Screenshot of clone repository dialog in GitHub app"></p>
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-app-clone-repo.png')" src="/placeholder.gif" alt="Screenshot of clone repository dialog in GitHub app"></p>
 
     <h3>Open repo in editor</h3>
 
-    <p><img src="~/assets/managing-files/vscode-open-repo.png" alt="Screenshot of Visual Studio Code"></p>
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/vscode-open-repo.png')" src="/placeholder.gif" alt="Screenshot of Visual Studio Code"></p>
 
     <h3>Create a
       <code>.gitignore</code> file</h3>
 
-    <p><img src="~/assets/managing-files/vscode-add-file.gif" alt="Animation of adding a file in VS Code"></p>
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/vscode-add-file.gif')" src="/placeholder.gif" alt="Animation of adding a file in VS Code"></p>
 
     <h3>Edit the README.md file</h3>
 
-    <p><img src="~/assets/managing-files/vscode-add-content.gif" alt="Adding content to the README file"></p>
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/vscode-add-content.gif')" src="/placeholder.gif" alt="Adding content to the README file"></p>
 
     <h3>Commit changes</h3>
 
-    <p><img src="~/assets/managing-files/github-desktop-commit.gif" alt="Animation of how to commit with GitHub Desktop"></p>
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-desktop-commit.gif')" src="/placeholder.gif" alt="Animation of how to commit with GitHub Desktop"></p>
 
     <h3>Sync with Github</h3>
 
-    <p><img src="~/assets/managing-files/github-desktop-push.gif" alt="Animation of how to push code with GitHub Desktop"></p>
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-desktop-push.gif')" src="/placeholder.gif" alt="Animation of how to push code with GitHub Desktop"></p>
 
     <h3>View changes on Github</h3>
 
-    <p><img src="~/assets/managing-files/github-view-changes.png" alt="Screenshot of a repository on GitHub"></p>
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-view-changes.png')" src="/placeholder.gif" alt="Screenshot of a repository on GitHub"></p>
 
     <h3>Repeat</h3>
 
@@ -102,23 +102,23 @@
 
     <h3>Branching and Merging</h3>
 
-    <p><img src="~/assets/managing-files/github-desktop-branch.gif" alt="Animation of creating a branch in GitHub Desktop"></p>
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-desktop-branch.gif')" src="/placeholder.gif" alt="Animation of creating a branch in GitHub Desktop"></p>
 
     <p>Once you have added content, commit those changes and publish them to GitHub.</p>
 
-    <p><img src="~/assets/managing-files/github-desktop-commit-to-branch.gif" alt="Animation of committing and publishing to GitHub"></p>
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-desktop-commit-to-branch.gif')" src="/placeholder.gif" alt="Animation of committing and publishing to GitHub"></p>
 
     <h3>Pull Requests</h3>
 
-    <p><img src="~/assets/managing-files/github-submit-pr.gif" alt="Animation of submitting a pull request"></p>
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-submit-pr.gif')" src="/placeholder.gif" alt="Animation of submitting a pull request"></p>
 
     <h3>Merging in a pull request</h3>
 
-    <p><img src="~/assets/managing-files/github-merge-pr.gif" alt="Animation of merging in a pull request"></p>
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-merge-pr.gif')" src="/placeholder.gif" alt="Animation of merging in a pull request"></p>
 
     <h3>Pull newest changes to your desktop</h3>
 
-    <p><img src="~/assets/managing-files/github-fetch-changes.gif" alt="Animation of fetching new changes from GitHub"></p>
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-fetch-changes.gif')" src="/placeholder.gif" alt="Animation of fetching new changes from GitHub"></p>
 
     <h3>Keep Practicing</h3>
 
@@ -144,13 +144,50 @@
 </template>
 
 <script>
-// https://github.com/wesbos/JavaScript30/blob/master/13%20-%20Slide%20in%20on%20Scroll/index-FINISHED.html
+function debounce(func, wait = 20, immediate = true) {
+  var timeout
+  return function() {
+    var context = this,
+      args = arguments
+    var later = function() {
+      timeout = null
+      if (!immediate) func.apply(context, args)
+    }
+    var callNow = immediate && !timeout
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+    if (callNow) func.apply(context, args)
+  }
+}
+
 export default {
   head: {
     title: 'Managing files tutorial'
   },
+  data: function() {
+    return {
+      images: []
+    }
+  },
   mounted() {
     Prism.highlightAll()
+
+    this.images = this.$el.querySelectorAll('img.lazy-load')
+
+    window.addEventListener('scroll', debounce(this.checkImage))
+  },
+  methods: {
+    checkImage: function() {
+      this.images.forEach(loadImage => {
+        const scrollPosition = window.scrollY + window.innerHeight
+        const loadPosition = loadImage.offsetTop - 200
+
+        if (!loadImage.classList.contains('loaded') && scrollPosition > loadPosition) {
+          loadImage.src = loadImage.dataset.src
+          loadImage.classList.add('loaded')
+        }
+      })
+    }
   }
 }
 </script>

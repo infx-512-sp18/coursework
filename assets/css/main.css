@@ -46,3 +46,10 @@ main p {
 main ul li {
   @apply .leading-normal
 }
+main pre {
+  @apply .text-xs .m-0 .p-0
+}
+main code {
+  background-color: config('colors.grey-light');
+  @apply .px-1 .rounded-sm
+}

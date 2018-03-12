@@ -37,7 +37,7 @@
     <p>These tools can be downloaded from the website or installed via
       <a href="https://brew.sh/">Homebrew</a> (MacOS only) with the following commands:</p>
 
-    <pre class="text-sm m-0 p-0"><code class="language-bash">$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    <pre><code class="language-bash">$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ brew cask install google-chrome slack visual-studio-code github
 $ brew install node</code></pre>
 
