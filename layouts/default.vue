@@ -51,6 +51,9 @@
               <nuxt-link to="/javascript-iteration">Javascript iteration</nuxt-link>
             </li>
             <li>
+              <nuxt-link to="/javascript-filtering">Javascript sorting</nuxt-link>
+            </li>
+            <li>
               <nuxt-link to="/javascript-ajax">Javascript AJAX</nuxt-link>
             </li>
           </ol>
@@ -64,9 +67,10 @@
       </div>
     </div>
 
-    <footer class="text-sm">
+    <footer class="text-sm pt-4 pb-4">
       <p>&copy; 2018
-        <a href="https://nickdenardis.com/">Nick DeNardis</a> |
+        <a href="https://nickdenardis.com/">Nick DeNardis</a> adapted from
+        <a href="https://ischool.uw.edu/people/faculty/profile/dlsinfo">Dave Stearns</a> |
         <a href="https://ischool.uw.edu/">The Information School</a> |
         <a href="https://uw.edu/">University of Washington</a>
       </p>
