@@ -11,7 +11,7 @@
       <li>Standardized by w3 Consortium</li>
     </ul>
 
-    <h3>TImeline</h3>
+    <h3>Timeline</h3>
 
     <ul>
       <li>HyperText Markup Language in Early 90s</li>
@@ -52,9 +52,10 @@
 
     <h2>HTML is text</h2>
 
-    <p>HTML files are just plain text files, so you can edit them in any text editor, but there are several editors that are optimized for web development. I would highly recommend using
-      <a href="https://code.visualstudio.com/">Visual Studio Code</a> (vscode) for this tutorial. It's free, available on all platforms, and has all of the features you need already built-in.</p>
-    <p>To start this tutorial, create a folder somewhere in your computer, and open that folder using vscode. Choose the
+    <p>HTML files are plain text files, so you can edit them in any text editor, but there are several editors that are designed for web development. I recommend using
+      <a href="https://code.visualstudio.com/">Visual Studio Code</a> (VSCode) for this tutorial. It's free, available on all platforms, and has all of the features you need already built-in.</p>
+    <p>To start this tutorial, create a folder somewhere in your computer (I suggest
+      <code>/Users/{username}/Sites/infx512/encoding-html</code>), and open that folder using VSCode. Choose the
       <code>File</code> menu and then choose
       <code>Open...</code>. Find the folder you created, select the folder, and choose the
       <code>Open</code> button.</p>
@@ -62,16 +63,17 @@
       <code>File</code> menu again, choose
       <code>New File</code>, and save that new file with the name
       <code>index.html</code> inside the folder you opened. By giving it the file extension
-      <code>.html</code> you have told vscode that this is an HTML file, so it will give you the correct syntax coloring and features.</p>
+      <code>.html</code> you have told VSCode that this is an HTML file, so it will give you the correct syntax coloring and features.</p>
     <p>The name
-      <code>index.html</code> is also special on the web. When a web browser asks a web server for a path that points to a folder, the web server will look for a file named
+      <code>index.html</code> is special on the web. When a web browser asks a web server for a path that points to a folder, the web server will look for a file named
       <code>index.html</code> and return it to the browser if it exists. This is considered the "home page" for the folder.</p>
-    <h2 id="sec-htmldocumentsstartwithadoctypedeclaration">HTML Documents Start with a Doctype Declaration</h2>
-    <p>All HTML files start with a document type declaration, commonly referred to as the "doctype." The HTML version 5 document type declaration is really simple. Enter this as the first line of your HTML file:</p>
+    <h2>HTML documents start with a doctype declaration</h2>
+    <p>HTML files start with a document type declaration, commonly referred to as the "
+      <code>doctype</code>." The HTML version 5 document type declaration is really simple. Enter this as the first line of your HTML file:</p>
     <pre><code class="html language-html">&lt;!DOCTYPE html&gt;</code></pre>
     <p>That tells any program that reads this file to interpret the contents as HTML version 5 syntax. As the version number implies,
       <a href="http://diveintohtml5.info/past.html">there have been several versions of HTML</a> already, and not all of them used the exact same syntax. Thankfully for you, HTML5 is now the current standard and it's syntax is simple and straightforward.</p>
-    <h2 id="sec-htmlisatreeofelements">HTML is a Tree of Elements</h2>
+    <h2>HTML is a tree of elements</h2>
     <p>The rest of an HTML document is a simple tree of
       <strong>elements</strong>. If you've taken a second-level computer science course, you should already know what a tree data structure is, but if you haven't (or if you forgot), a tree is a very common data structure that looks like this:</p>
     <p><img src="~/assets/encoding-html/html-tree.png" alt="tree data structure" /><br />
@@ -87,11 +89,11 @@
       <strong>leaf node</strong>.</p>
     <p>These tree data structures are used all of the place in computer software. For example, the way your computer stores and organizes files is a tree structure: files exist within folders, which can exist within other folders, and so on, and so on. Files are leaf nodes and the folder that has no parent folder (e.g., the
       <code>c:</code> drive on Windows or the root folder on a Unix system) is a root note.</p>
-    <h2 id="sec-htmlsyntax">HTML Syntax</h2>
+    <h2>HTML syntax</h2>
     <p>The nodes in an HTML document tree are known as
       <strong>elements</strong>. An element has the following syntax:</p>
     <pre><code class="html language-html">&lt;element-name&gt;...some content...&lt;/element-name&gt;</code></pre>
-    <h3 id="sec-startandendtags">Start and End Tags</h3>
+    <h3>Start and end tags</h3>
     <p>An element is composed of a
       <strong>start tag</strong> and
       <strong>end tag</strong> and some content in between. The start tag is this bit:</p>
@@ -103,7 +105,7 @@
       <code>body</code>,
       <code>h1</code>,
       <code>p</code>. There are
-      <a href="http://www.w3schools.com/tags/ref_byfunc.asp">lots of elements</a> defined in HTML, and each communicates something about the content inside of the element.</p>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">lots of elements</a> defined in HTML, and each communicates something about the content inside of the element.</p>
     <p>The end tag looks just like the start tag, except it has a forward-slash just after the less-than sign:</p>
     <pre><code class="html language-html">&lt;/element-name&gt;</code></pre>
     <p>That marks the end of the element. What goes in between is the element's
@@ -117,31 +119,31 @@
       <code>&lt;em&gt;</code> element is used for content that is emphasized, and it can be nested inside lots of other elements. Although browsers typically render emphasized text in italics, you shouldn't think of that element as "the italics tag." Instead, think of it as a tag that tells the program reading this page that the text inside is emphasized. We can use CSS to format that emphasized text any way we want, so we use elements like
       <code>&lt;em&gt;</code> to denote the
       <em>function</em> that text plays.</p>
-    <h3 id="sec-attributes">Attributes</h3>
+    <h3>Attributes</h3>
     <p>The start tag of an element may also contain one or more
       <strong>attributes</strong>, which are used to specify options, provide additional information, or add subtler shades of meaning to an element. Attributes go inside the start tag, and look like this:</p>
     <pre><code class="html language-html">&lt;p lang="en" class="alert"&gt;...some content...&lt;/p&gt;</code></pre>
     <p>The syntax for attributes is a name, followed by an equal sign, followed by a value in double-quotes. If there are multiple attributes, they are separated by spaces. The HTML standard defines several
-      <a href="http://www.w3schools.com/tags/ref_standardattributes.asp">global attributes</a> that can be used on any element, and many elements also define their own attributes that are particular to that element. The
-      <code>lang</code> attribute shown in the previous example is a global one used to indicate the language in which the element's content is written. Programs reading this file might use that to properly index the content, correctly pronounce it via a screen reader, or even translate it into another language.</p>
-    <h3 id="sec-selfclosingelements">Self-Closing Elements</h3>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">global attributes</a> that can be used on any element, and many elements also define their own attributes that are particular to that element. The
+      <code>lang</code> attribute shown in the previous example is a global one used to indicate the language in which the element's content is written. Programs reading this file use that to properly index the content, correctly pronounce it via a screen reader, or even translate it into another language.</p>
+    <h3>Self-closing elements</h3>
     <p>A few HTML elements don't require a separate end-tag because they can't contain any child elements or other textural content. A great example is the
       <code>&lt;img&gt;</code> element, which is used for inserting images into the page. You can specify the path to the image file in an attribute named
       <code>src</code>, but the image element itself can't contain additional text or other content. In these cases, all you need to include is the start tag:</p>
     <pre><code class="html language-html">&lt;img src="path/to/my/image.png" alt="descriptive text for screen readers and indexers"&gt;</code></pre>
     <p>These are known as
-      <strong>self-closing elements</strong>. You may also see these kinds of elements with a forward slash included before the ending greater-than sign. This was required by previous versions of HTML (especially the abomination known as
-      <a href="http://www.w3schools.com/html/html_xhtml.asp">XHTML</a>), but in HTML5 it's totally optional. Some purists will still insist that you include it, and if you do, it looks like this:</p>
+      <strong>self-closing elements</strong>. You may also see these kinds of elements with a forward slash included before the ending greater-than sign. This was required by previous versions of HTML (especially in
+      <a href="https://developer.mozilla.org/en-US/docs/Glossary/XHTML">XHTML</a>), but in HTML5 it's totally optional. Some purists will still insist that you include it, and if you do, it looks like this:</p>
     <pre><code class="html language-html">&lt;img src="path/to/my/image.png" alt="descriptive text for screen readers and indexers"/&gt;</code></pre>
     <p>But again, this is no longer required in HTML5, so feel free to omit that forward slash.</p>
-    <h3 id="sec-comments">Comments</h3>
+    <h3>Comments</h3>
     <p>Besides doctype declarations, elements, and attributes, the only other legal syntax in an HTML file is a comment, which looks like this:</p>
     <pre><code class="html language-html">&lt;!-- this is a comment --&gt;</code></pre>
     <p>Comments are ignored by the browser, so they can serve two purposes: documentation to help you or other developers understand some section of the page; or as a quick way to tell the browser to temporarily ignore a block of HTML that is causing you troubles.</p>
     <p>Since the syntax is quite awkward to type, most web-optimized editors have a built-in keystroke that will toggle the current line as a comment. Try hitting
-      <code>Cmd+/</code> (
-      <code>Ctrl+/</code> on Windows). It should make the line a comment, and then make it not a comment the next time you use the same keystroke.</p>
-    <h2 id="sec-overalldocumentstructure">Overall Document Structure</h2>
+      <code>Cmd + /</code> (
+      <code>Ctrl + /</code> on Windows). It should make the line a comment, and then make it not a comment the next time you use the same keystroke.</p>
+    <h2>Overall document structure</h2>
     <p>Now that you understand the basic HTML syntax, let's see how they combine to create a basic page. As we noted earlier, every page begins with the HTML5 doctype declaration, and the rest is a tree of elements containing content. The root element is named
       <code>&lt;html&gt;</code> and it should contain two child elements:
       <code>&lt;head&gt;</code> and
@@ -155,8 +157,8 @@
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-    <h3 id="sec-theheadsection">The
-      <code>&lt;head&gt;</code> Section</h3>
+    <h3>The
+      <code>&lt;head&gt;</code> section</h3>
     <p>The
       <code>&lt;head&gt;</code> element contains information about the page that doesn't appear in the main content window when viewing the page in the browser. For example, we can specify the title of the page here:</p>
     <pre><code class="html language-html">&lt;!DOCTYPE html&gt;
@@ -208,7 +210,7 @@
     <p>Again, these are not visible in the browser window, but programs like search indexers refer to these elements to gather meta-data about your page.</p>
     <p>Another important
       <code>&lt;meta&gt;</code> element to define is the one that controls how a browser on a mobile device handles zooming of the page. By default, a mobile browser will attempt to zoom out to show the entire page when it first loads. This is necessary if the page doesn't adjust its layout for smaller screens, but
-      <a href="http://www.w3schools.com/css/css_rwd_viewport.asp">if your page is responsive to the screen width</a> (which ours will be), you can tell the browser not to zoom out using the
+      <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">if your page is responsive to the screen width</a> (which ours will be), you can tell the browser not to zoom out using the
       <code>&lt;meta name="viewport"&gt;</code> element:</p>
     <pre><code class="html language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -224,11 +226,11 @@
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-    <h3 id="sec-thebodysection">The
-      <code>&lt;body&gt;</code> Section</h3>
+    <h3>The
+      <code>&lt;body&gt;</code> section</h3>
     <p>The
       <code>&lt;body&gt;</code> element contains all the content that is visible on the page. There are
-      <a href="http://www.w3schools.com/tags/ref_byfunc.asp">many elements</a> you can use here to convey your document's content. For now, let's just add a heading and a paragraph:</p>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">many elements</a> you can use here to convey your document's content. For now, let's just add a heading and a paragraph:</p>
     <pre><code class="html language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -246,21 +248,30 @@
 &lt;/html&gt;</code></pre>
     <p>You can now open this page in your web browser. Double click on the HTML file in your Finder/File Explorer, and you should see the heading and the paragraph displayed in the browser window. The page title should also be shown in the browser tab.</p>
     <p>Pretty simple, eh? That's really all you need to get going. You can use this page you just built as your default template for new pages, as it contains all the core elements every page should have.</p>
-    <h2 id="sec-themostcommonelements">The Most Common Elements</h2>
+    <h2>The most common elements</h2>
     <p>This next section will introduce you to the most commonly-used elements in web pages, but this is by no means exhaustive.</p>
-    <h3 id="sec-structuralelements">Structural Elements</h3>
+    <h3>Structural elements</h3>
     <p>HTML5 introduced several new elements that are meant to denote structural regions of the document:
-      <a href="http://www.w3schools.com/Tags/tag_header.asp">header</a>,
-      <a href="http://www.w3schools.com/Tags/tag_main.asp">main</a>,
-      <a href="http://www.w3schools.com/Tags/tag_article.asp">article</a>,
-      <a href="http://www.w3schools.com/Tags/tag_section.asp">section</a>,
-      <a href="http://www.w3schools.com/Tags/tag_aside.asp">aside</a>, and
-      <a href="http://www.w3schools.com/Tags/tag_footer.asp">footer</a>.</p>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header">header</a>,
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main">main</a>,
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article">article</a>,
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section">section</a>,
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">aside</a>, and
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer">footer</a>.</p>
     <p>Although these are new, they still work fine with older browsers. HTML was defined to be forwards-compatible, so browsers treat unknown elements as simple block elements with no particular formatting. We will make use of these as we start to build more complex pages.</p>
-    <h3 id="sec-headings">Headings</h3>
+    <h3>Headings</h3>
     <p>The
-      <code>&lt;h1&gt;</code> element from above is a top-level heading. There is typically only one of those in a page, and it should be used for the page's overall title. But HTML defines up to six levels of headings, and you can use those levels to define an outline of your document.</p>
-    <h3 id="sec-images">Images</h3>
+      <code>&lt;h1&gt;</code> element from above is a top-level heading. It is not limited to one per page, but should be used for the page's overall title. HTML defines up to six levels of headings, and you can use those levels to define an outline of your document.</p>
+    <blockquote>"Sole purpose [of headings] is todesignate a hierarchy of headline importance, so that both human readers and automated search engines can look at a document and easily determine its information structure."
+      <cite>
+        ~
+        <a href="https://webaim.org/techniques/semanticstructure/">webaim.org</a>
+      </cite>
+    </blockquote>
+    <p>"Lower degree headings should be contained within headings of the next highest degree (i.e., one should not skip heading levels, such as from an
+      <code>&lt;h2&gt;</code> to an
+      <code>&lt;h4&gt;</code>, going down the document)."</p>
+    <h3>Images</h3>
     <p>As noted above, adding an image to your page is done using the
       <code>&lt;img&gt;</code> element:</p>
     <pre><code class="html language-html">&lt;img src="path/to/my/image.png" alt="descriptive text for screen readers and indexers"&gt;</code></pre>
@@ -278,7 +289,7 @@
       <code>\</code>, but on the web, it's the exact opposite!</div>
     <p>The
       <code>alt</code> attribute should contain some text that describes the image. This is primarily used by assistive technologies such as screen readers for the blind, but it is also used by indexers like Google to power their image search feature.</p>
-    <h3 id="sec-lists">Lists</h3>
+    <h3>Lists</h3>
     <p>There are three kinds of lists in HTML: unordered, ordered, and dictionary lists. Unordered lists are for list of things that have no particular logical ordering, such as ingredients for a recipe:</p>
     <pre><code class="html language-html">&lt;ul&gt;
     &lt;li&gt;1 tablespoon of oil&lt;/li&gt;
@@ -329,7 +340,7 @@
       <code>&lt;dt&gt;</code> (dictionary term) and
       <code>&lt;dd&gt;</code> (dictionary definition) pairs.</p>
     <p>Using the correct list type helps programs that read the page know how to interpret and manipulate the content correctly. For example, a program might offer to sort an unordered list alphabetically, but should never sort an ordered list as it has an implicit ordering. Similarly, a program that prints a dictionary list would know that the term must always be on the same page as the definition.</p>
-    <h3 id="sec-hyperlinks">Hyperlinks</h3>
+    <h3>Hyperlinks</h3>
     <p>The "H" in HTML standard for "Hypertext," which means that page should link to each other. Encoding a link is done using the
       <code>&lt;a&gt;</code> element:</p>
     <pre><code class="html language-html">&lt;a href="https://google.com"&gt;Search on Google&lt;/a&gt;</code></pre>
@@ -343,7 +354,7 @@
       <code>other-page.html</code> in the same directory as the current page, the
       <code>href</code> attribute would simply be
       <code>other-page.html</code>.</p>
-    <h4 id="sec-bookmarklinks">Bookmark Links</h4>
+    <h4>Bookmark links</h4>
     <p>Hyperlinks can also link to another section of the same document. We call these
       <strong>bookmark links</strong>. When activated, the browser scrolls the window so that the element the links points to is at the top of the browser window. They look like this:</p>
     <pre><code class="html language-html">&lt;p&gt;For more detail see the &lt;a href="#details"&gt;Details section&lt;/a&gt; later in this document.&lt;/p&gt;
@@ -359,7 +370,7 @@
       <code>#</code> in front of the
       <code>id</code> value. When activated, the browser finds that element and scroll the page to it. The browser will also append this
       <code>#details</code> to the end of the URL, allowing you to bookmark or share a link that goes directly to that section of the page.</p>
-    <h4 id="sec-mailandtellinks">Mail and Tel Links</h4>
+    <h4>Mailto and tel links</h4>
     <p>Instead of pointing to another page or another section of the same page, hyperlinks can also invoke other actions. For example, if you want a hyperlink to start a new email message to a particular email address when activated, just set the
       <code>href</code> attribute to
       <code>mailto:some-address@domain.com</code>. For example:</p>
@@ -369,14 +380,15 @@
         <a href="mailto:informatics@uw.edu">contact us by email</a>.</p>
     </blockquote>
     <p>You can also preset the subject line and carbon-copy addresses. See the
-      <a href="https://en.wikipedia.org/wiki/Mailto">mailto syntax reference</a> for more details.</p>
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#E-mail_links">mailto syntax reference</a> for more details.</p>
     <p>A handy variant for mobile phones is the
       <code>tel:some-phone-number</code> syntax. When activated, these links ask users if they want to dial the number after the
       <code>tel:</code>. Here's a quick example:</p>
-    <pre><code class="html language-html">&lt;p&gt;For more information &lt;a href="tel:+12065551212"&gt;give us a call!&lt;/a&gt;.&lt;/p&gt;</code></pre>
+    <pre><code class="html language-html">&lt;p&gt;For more information &lt;a href="tel:+12065551212"&gt;give us a call&lt;/a&gt;!&lt;/p&gt;</code></pre>
     <blockquote>
       <p>For more information
-        <a href="tel:+12065551212">give us a call!</a>.</p>
+        <a href="tel:+12065551212">give us a call</a>!
+      </p>
     </blockquote>
     <p>On tablets and desktop browsers, these links may offer to launch various audio/video chat applications, such as Facetime or Skype.</p>
     <p>Note that it's always a good idea to include the country code in
@@ -385,7 +397,7 @@
       <code>+</code>, so the number above starts with
       <code>+1...</code>
     </p>
-    <h3 id="sec-divandspan">
+    <h3>
       <code>&lt;div&gt;</code> and
       <code>&lt;span&gt;</code>
     </h3>
@@ -397,10 +409,6 @@
     <p>You will see
       <code>&lt;div&gt;</code> and
       <code>&lt;span&gt;</code> used quite a bit as we get into building more complex HTML pages.</p>
-
-    <p>
-      <pre><code class="language-bash">browser-sync start --server --files "*.html, css/*.css"</code></pre>
-    </p>
   </main>
 </template>
 

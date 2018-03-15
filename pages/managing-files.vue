@@ -63,42 +63,116 @@
 
     <h3>Create a repo</h3>
 
+    <p>Sign in to your
+      <a href="https://github.com/">GitHub</a> account and click the "+" button in the header to create a new repository.</p>
+
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-add-repo.png')" src="~/assets/images/placeholder.gif" alt="Screenshot of add repository button"></p>
+
+    <p>Fill out the information about the repository. For the name, it is a best practice to use only two to three words, all lowercase and dashes to separate words.</p>
+
     <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-create-repo.png')" src="~/assets/images/placeholder.gif" alt="Screenshot of creating a repository on GitHub"></p>
 
     <h3>Clone repo</h3>
 
+    <p>Not that the repository is created, it is time to get it connected to a folder on your computer. This process is called cloning. Click the "Clone or download" button and choose the "Open in Desktop" link. This will pop open a dialog to ask for permissions to open in the desktop application. </p>
+
     <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-clone-repo.png')" src="~/assets/images/placeholder.gif" alt="Screenshot of cloning a repository on GitHub"></p>
+
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-open-dialog.png')" src="~/assets/images/placeholder.gif" alt="Screenshot of dialog to open GitHub Desktop"></p>
+
+    <p>Once in the application, it will ask you where to store the files on your computer. I recommend creating a folder at
+      <code>/Users/{username}/Sites/infx-512/</code> to store all your repositories for this course.</p>
 
     <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-app-clone-repo.png')" src="~/assets/images/placeholder.gif" alt="Screenshot of clone repository dialog in GitHub app"></p>
 
     <h3>Open repo in editor</h3>
 
+    <p>Once the code has been downloaded to your computer, it is time to open VSCode and open that folder.</p>
+
     <p><img class="lazy-load" :data-src="require('~/assets/managing-files/vscode-open-repo.png')" src="~/assets/images/placeholder.gif" alt="Screenshot of Visual Studio Code"></p>
+
+    <p>You will notice VSCode does have the ability to work with the repository to see differences, commit code and push it to GitHub, like the GitHub Desktop app. We will be using the GitHub Desktop app moving forward in this course, because it is a dedicated app that is clear what is going on with the repo.</p>
+    <p>here are many applications that work with GIT repositories, individuals and companies standardize on an application that makes them most productive.</p>
 
     <h3>Create a
       <code>.gitignore</code> file</h3>
+
+    <p>Now let's add some files to our project, the first is a special file,
+      <code>.gitignore</code>. This file is formatted in plain text with a filename or folder path on each line. The first item we are going to add is
+      <code>.DS_Store</code>, a file that Mac OS adds to every folder to keep track of settings and options.</p>
+
+    <p>Since this file is personal to your computer and doesn't have any value living with the code of a website, we will ignore it to ensure it does not get committed and pushed to GitHub.</p>
+
+    <p>Another file you will commonly see in the
+      <code>.gitignore</code> file is
+      <code>node_modules</code>, late in the course we will get into installing code from
+      <code>npm</code>, a repository of open source tools that can be used on any project. We would ignore duplicating those files and pushing them into our repository.</p>
 
     <p><img class="lazy-load" :data-src="require('~/assets/managing-files/vscode-add-file.gif')" src="~/assets/images/placeholder.gif" alt="Animation of adding a file in VS Code"></p>
 
     <h3>Edit the README.md file</h3>
 
+    <p>GitHub and other code storage websites use a filetype called
+      <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown</a>. It is a way to express document formatting with regular characters and when viewed on these websites, the file is converted to HTML to view with formatting.</p>
+
     <p><img class="lazy-load" :data-src="require('~/assets/managing-files/vscode-add-content.gif')" src="~/assets/images/placeholder.gif" alt="Adding content to the README file"></p>
+
+    <p>This special
+      <code>README.md</code> file in the root of the project is automatically displayed to users in GitHub as they are browsing your code.</p>
+
+    <p>In addition, this file is where developers can document various things about a project or code. The best
+      <code>README.md</code> files have a consistent format, an example:
+      <a href="https://gist.github.com/PurpleBooth/109311bb0361f32d87a2">templates</a>.</p>
+
+    <h3>Preview the rendered markdown file</h3>
+
+    <p>There is a button in the top-right of VSCode when editing a markdown file to "preview" the rendered HTML of the file. This is helpful to ensure your expected formatting is rendered correctly in HTML.</p>
+
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/vscode-markdown-preview.gif')" src="~/assets/images/placeholder.gif" alt="Animation of markdown preview"></p>
+
+    <p>Note that VSCode graphically shows a gutter bar next to the lines that have been added. It uses git to determine which lines have changed within the current file. Lines that were removed, show a small wedge to indicate where lines were previously.</p>
 
     <h3>Commit changes</h3>
 
+    <p>Once the changes have been made, it is time to commit the changes to make a 'save point' with a comment about what has changed.</p>
+
+    <p>All files changed will show in the "Changes" area. Select the files that you want to be saved, you don't have to choose every file, but most of the time you will.</p>
+
+    <p>Writing a good commit message is an art, being concise while still explaining what changed and why is important. The
+      <code>Summary</code>, the first line, should complete this sentence: "if applied, this commit will
+      <code>Add instructions to the README</code>." The emphasised words in this sentence will make an appropriate commit message.</p>
+
+    <p>The
+      <code>Description</code> is a larger area to explain in more detail why the change was needed, any side effects the code will produce and link to any issues it resolves or where the change was requested. This description area should be formatted in Markdown.
+    </p>
+
     <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-desktop-commit.gif')" src="~/assets/images/placeholder.gif" alt="Animation of how to commit with GitHub Desktop"></p>
 
-    <h3>Sync with Github</h3>
+    <h3>Viewing the commit history</h3>
+
+    <p>The list of changes should disappear and a message should be shown indicating that the commit was completed. Note that you click the Undo button to undo that commit if you decided it was a bad idea.</p>
+
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-desktop-history.png')" src="~/assets/images/placeholder.gif" alt="Screenshot of GitHub Desktop history"></p>
+
+    <h3>Push to origin (Github)</h3>
+
+    <p>After making one or more commits is it good practice to push the changes to the centeral GIT repository (In our case, GitHub). This will publish all the changes so other developers can pull them down and work off the updated code.</p>
 
     <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-desktop-push.gif')" src="~/assets/images/placeholder.gif" alt="Animation of how to push code with GitHub Desktop"></p>
 
     <h3>View changes on Github</h3>
 
+    <p>Now that the changes have been pushed, visiting the repository on GitHub should show all the changes made.</p>
+
     <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-view-changes.png')" src="~/assets/images/placeholder.gif" alt="Screenshot of a repository on GitHub"></p>
 
     <h3>Repeat</h3>
 
+    <p>This process can seem a bit straining at first, especially when coming from the process in desktop application or Google Web apps, where changes are saved in real time or without comments. After going through this course you will have an understanding of why this process is important. Thinking of changes to a codebase as "snapshots" in time allows you as a developer to isolate a bundle of changes (HTML, CSS, Images, etc) around a description and moving between each state in the code changes all the nessesary files at once.</p>
+
     <h2>Working collaboratively</h2>
+
+    <p>Often code is not created in isolation, especially if it is open source. Some time you want to work on a feature or some part of the code that may not work out and need </p>
 
     <h3>Branching and Merging</h3>
 
@@ -138,6 +212,12 @@
       </li>
       <li>
         <a href="https://guides.github.com/features/mastering-markdown/">Markdown guide</a>
+      </li>
+      <li>
+        <a href="https://help.github.com/articles/about-forks/">About forks</a>
+      </li>
+      <li>
+        <a href="https://help.github.com/articles/creating-a-pull-request-from-a-fork/">Creating a pull request from a fork</a>
       </li>
     </ul>
   </main>
