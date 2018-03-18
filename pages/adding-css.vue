@@ -6,29 +6,28 @@
       <strong>stylesheet</strong>) consists of a set of formatting rules. The browser interprets and applies these rules when it renders your web page.</p>
     <p>CSS is immensely powerful and flexible. You can control nearly every aspect of an element's appearance, including its overall placement on the page. To give you some idea of just how much control you have, check out the
       <a href="http://www.mezzoblue.com/zengarden/alldesigns/">examples in the CSS Zen Garden</a>. Every one of those examples uses the exact same HTML page, but they all look completely different because each one uses a different CSS stylesheet.</p>
-    <h2 id="sec-whytwodifferentlanguages">Why Two Different Languages?</h2>
+    <h2>Why two different languages?</h2>
     <p>If you are new to web programming, you might be wondering why there are two different languages: HTML for your page content; and CSS for your formatting rules. Why not just include the formatting right in with the content?</p>
     <p>There is an old, tried-and-true principle of programming that is known as the
-      <strong>
-        <a href="https://en.wikipedia.org/wiki/Separation_of_concerns">separation of concerns</a>
-      </strong>. Good software keeps separate things separate and loosely-coupled so that it's easy to change one without breaking the other. One typical separation that you will see in nearly every information system is the separation between data and the way those data are presented on-screen.</p>
+      <a href="https://en.wikipedia.org/wiki/Separation_of_concerns">separation of concerns</a>
+      . Good software keeps separate things separate and loosely-coupled so that it's easy to change one without breaking the other. One typical separation that you will see in nearly every information system is the separation between data and the way those data are presented on-screen.</p>
     <p>By separating our data from the way they are presented, we achieve a number of benefits:</p>
     <ul>
       <li>Several HTML pages can all share the same CSS file, allowing us to change the look of our entire site by editing only one file.</li>
       <li>The same HTML can be presented to different users in different ways. For example, you could allow users to "skin" the site in one of several different themes, or you could use different default formatting for different regions of the world with different aesthetic sensibilities</li>
       <li>You can also dynamically adjust the look of your page by applying new style rules to elements in response to user interaction (clicking, hovering, scrolling, etc.)</li>
     </ul>
-    <h2 id="sec-addingastylesheettoyourpage">Adding a Stylesheet to your Page</h2>
+    <h2>Adding a stylesheet to your page</h2>
     <p>You can add CSS rules to your page in three different ways, but the best practice is to use a separate CSS stylesheet file, and link that to your HTML page. These stylesheet files are typically put into a
       <code>css/</code> subdirectory to keep them separate from all your HTML pages.</p>
     <p>For example, say you wanted to create one stylesheet for your
       <code>index.html</code> page that you created during the
-      <a href="../encoding-html/">Encoding in HTML Tutorial</a>. Create a new directory named
+      <a href="../encoding-html">Encoding in HTML</a> tutorial. Create a new directory named
       <code>css</code> next to your
       <code>index.html</code> file. Then create a new file in that new
       <code>css/</code> directory named
       <code>styles.css</code>. The resulting file structure should be like this:</p>
-    <pre><code>myproject/
+    <pre><code class="language-bash">myproject/
 |-- index.html
 |-- css/
     |-- styles.css</code></pre>
@@ -41,7 +40,7 @@
     <p>The name you use for your CSS file can be anything you want. It just needs to match what you put in the
       <code>href</code> attribute of the
       <code>&lt;link&gt;</code> element.</p>
-    <h2 id="sec-normalizingbrowserdefaults">Normalizing Browser Defaults</h2>
+    <h2>Normalizing browser defaults</h2>
     <p>Each web browser applies a set of default styles to any page it loads, which you can then override in your stylesheets. Unfortunately, these defaults are not completely consistent across all the browsers, so you might end up with a slightly different look in Edge than in Chrome.</p>
     <p>Thankfully the web development community has responded by creating
       <a href="https://necolas.github.io/normalize.css/">normalize.css</a>. This is a CSS stylesheet that simply normalizes all of the browser defaults to one consistent set of base styles, so that you can build upon a solid, uniform, and well-known foundation.</p>
@@ -50,7 +49,7 @@
       <a href="https://cdnjs.com/libraries/normalize">their online version</a>:</p>
     <pre><code class="html language-html">&lt;head&gt;
     &lt;!-- normalize.css --&gt;
-    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"&gt;
 
     &lt;!-- our own stylesheet --&gt;
     &lt;link rel="stylesheet" href="css/styles.css"&gt;
@@ -59,7 +58,7 @@
       <code>.min.css</code> have been "minified," which just means that all the spaces have been taken out to make the file smaller and faster to download. When loading a library file from an online location like this, always use the
       <code>.min.css</code> version if it's available.</p>
     <p>This works well in every case except when you are offline, which can happen when you are doing development. If you need access to normalize.css while offline,
-      <a href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">download it</a> to your project folder and link to it using a relative path, just like the link to your own stylesheet. By convention, we typically put files like this into a
+      <a href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">download it</a> to your project folder and link to it using a relative path, just like the link to your own stylesheet. By convention, we typically put files like this into a
       <code>lib/</code> folder, to keep them separate from our own files that we actively change.</p>
     <h2 id="sec-basicsyntax">Basic Syntax</h2>
     <p>A CSS stylesheet follows this basic syntax:</p>
@@ -81,16 +80,16 @@ selector {
     <p>You can add comments to your stylesheets by wrapping them with
       <code>/*</code> and
       <code>*/</code>. Comments are ignored by the browser, but can be very helpful for explaining things to other developers (or for reminding yourself about why you did something in a particular way).</p>
-    <h2 id="sec-selectors">Selectors</h2>
+    <h2>Selectors</h2>
     <p>There are
-      <a href="http://www.w3schools.com/cssref/css_selectors.asp">many kinds of selectors</a> supported in CSS, but you will use only a handful in most situations.</p>
-    <h3 id="sec-elementselectors">Element Selectors</h3>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">many kinds of selectors</a> supported in CSS, but you will use only a handful in most situations.</p>
+    <h3>Element selectors</h3>
     <p>Element selectors select elements by their element name. For example, this selector will select all
       <code>&lt;p&gt;</code> elements in the page, regardless of where they exist.</p>
     <pre><code class="css language-css">p {
     ...
 }</code></pre>
-    <h3 id="sec-classselectors">Class Selectors</h3>
+    <h3>Class selectors</h3>
     <p>Class selectors select elements by the value of their
       <code>class</code> attribute. Every HTML element can have a
       <code>class</code> attribute set to one or more class names. Multiple class names are separated by a space, and for obvious reasons, your class names can't contain spaces. For example, this paragraph element has two class names:
@@ -133,7 +132,7 @@ selector {
       <code>term</code> style class to an element that wraps around the term:</p>
     <pre><code class="html language-html">&lt;p&gt;A stylesheet is a series of &lt;span class="term"&gt;rules&lt;/span&gt;.
 A rule starts with a &lt;span class="term"&gt;selector&lt;/span&gt;, ...&lt;/p&gt;</code></pre>
-    <h3 id="sec-idselectors">ID Selectors</h3>
+    <h3>ID selectors</h3>
     <p>ID selectors select elements by their
       <code>id</code> attribute. Every HTML element can have an
       <code>id</code> attribute, but unlike the

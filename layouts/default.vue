@@ -33,6 +33,9 @@
               <nuxt-link to="/emmet-autocomplete">Emmet autocompletion</nuxt-link>
             </li>
             <li>
+              <nuxt-link to="/browsersync">Browsersync setup</nuxt-link>
+            </li>
+            <li>
               <nuxt-link to="/adding-css">Adding CSS style</nuxt-link>
             </li>
             <li>
