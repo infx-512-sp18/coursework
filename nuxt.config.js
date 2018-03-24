@@ -15,7 +15,7 @@ module.exports = {
         rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'
       },
       {
-        rel: 'stylesheet', href: '/css/prism.css'
+        rel: 'stylesheet', href: '/coursework/css/prism.css'
       },
       {
         rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i'
@@ -23,7 +23,7 @@ module.exports = {
     ],
     script: [
       {
-        src: '/js/prism.js',
+        src: '/coursework/js/prism.js',
       }
     ]
   },
