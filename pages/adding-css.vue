@@ -60,7 +60,7 @@
     <p>This works well in every case except when you are offline, which can happen when you are doing development. If you need access to normalize.css while offline,
       <a href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">download it</a> to your project folder and link to it using a relative path, just like the link to your own stylesheet. By convention, we typically put files like this into a
       <code>lib/</code> folder, to keep them separate from our own files that we actively change.</p>
-    <h2 id="sec-basicsyntax">Basic Syntax</h2>
+    <h2>CSS Syntax</h2>
     <p>A CSS stylesheet follows this basic syntax:</p>
     <pre><code class="css language-css">/* this is a comment */
 selector {
@@ -149,7 +149,7 @@ A rule starts with a &lt;span class="term"&gt;selector&lt;/span&gt;, ...&lt;/p&g
 }</code></pre>
     <p>Since the
       <code>id</code> attribute is commonly used to create bookmark hyperlinks (i.e., links that scroll the page to a particular section of the page), id selectors are a handy way to style those elements.</p>
-    <h3 id="sec-descendantselectors">Descendant Selectors</h3>
+    <h3>Descendant selectors</h3>
     <p>All the selectors mentioned so far will select all matching elements regardless of where they are in the HTML element tree. But sometimes you want to style only a set of elements that exist within a particular parent or ancestor element, and not all the other matching elements elsewhere in the page. You can do this kind of targeted selecting using a descendant selector.</p>
     <p>For example, say you wanted to style all paragraphs within the
       <code>&lt;header&gt;</code> element, but not the other paragraph elements that exist elsewhere in the page. You can select just those paragraph elements using a selector like this:</p>
@@ -173,7 +173,7 @@ header p .logo {
 header &gt; p {
     ...
 }</code></pre>
-    <h3 id="sec-groupselectors">Group Selectors</h3>
+    <h3>Group selectors</h3>
     <p>Sometimes you want to apply the same formatting to several elements, all of which might have different element names or style classes. For example, you might want to set the same font-weight on all the
       <code>h1</code>,
       <code>h2</code>, and
@@ -188,7 +188,7 @@ h1, h2, h3 {
       <strong>D</strong>on't
       <strong>R</strong>epeat
       <strong>Y</strong>ourself! If you find yourself copying and pasting formatting properties between rules, stop and ask yourself if you can use a group selector instead.</p>
-    <h3 id="sec-hoverandfocuspseudoselectors">Hover and Focus Pseudo Selectors</h3>
+    <h3>Hover and focus pseudo selectors</h3>
     <p>The last types of selectors that you will use quite often are the hover and focus
       <strong>pseudo-selectors</strong>. These select elements that the mouse is hovering over, or that have the keyboard focus, respectively. You can use these to apply different formatting on hover or focus, usually to indicate that the element is clickable, or to help those with vision impairments notice where the keyboard focus is. The syntax looks like this:</p>
     <pre><code class="css language-css">/* selects all elements with class="nav-link" */
@@ -207,14 +207,14 @@ input:focus {
     /* change background color to yellow */
     background-color: yellow;
 }</code></pre>
-    <h3 id="sec-otherselectors">Other Selectors</h3>
+    <h3>Other selectors</h3>
     <p>These are the most common ones you will use, but there are many other kinds of powerful selectors you also have at your disposal for less-common tasks. See the
-      <a href="http://www.w3schools.com/cssref/css_selectors.asp">CSS Selectors Reference</a> for a complete list.</p>
-    <h3 id="sec-practiceusingselectors">Practice Using Selectors</h3>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">CSS Selectors Reference</a> for a complete list.</p>
+    <h3>CSS selector practice</h3>
     <p>Now take a moment to practice using selectors by playing
-      <a href="http://flukeout.github.io/">CSS Diner!</a>
+      <a href="https://flukeout.github.io/">CSS Diner!</a>
     </p>
-    <h2 id="sec-thecascade">The Cascade</h2>
+    <h2>Cascading styles</h2>
     <p>A typically stylesheet will contain lots of rules, so the natural next question is, how do all of these rules combine, and what happens when I define conflicting rules?</p>
     <p>Although the actual algorithm is pretty complex, you can think of it this way:</p>
     <ol>
@@ -224,13 +224,13 @@ input:focus {
     </ol>
     <p>This simple explanation is accurate in most cases, but there are a few cases where it isn't quite right. The CSS standard gives higher priority to some selectors over others, making the order in which they were defined irrelevant in some cases. The concept is known as
       <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">Selector Specificity</a>, and you may run into cases where this becomes important. If you notice that one of your style rules is not being applied, despite your syntax being correct, check your browser's developer tools to see if your rule is being overridden by a more specific rule in an earlier stylesheet. Then adjust your rule so that it has the same or greater specificity.</p>
-    <h2 id="sec-propertyinheritance">Property Inheritance</h2>
+    <h2>Property inheritance</h2>
     <p>All CSS properties affect the styling of the elements directly selected by the rule, but
       <a href="http://stackoverflow.com/questions/5612302/which-css-properties-are-inherited">several properties</a> also affect the styling of all descendant elements as well. For example, if I set the font family for the
       <code>&lt;body&gt;</code> element, all elements within the body section will use that font unless it is overriden by another rule. </p>
     <p>We call these
       <strong>inherited</strong> properties, because the descendant elements inherit the setting from their ancestor element. This is a powerful mechanism that enables us to specify these properties only once for a given branch of the element tree. In general, try to set these properties on the highest-level element you can, and let the descendant elements inherit the setting from their ancestor.</p>
-    <h2 id="sec-fonts">Fonts</h2>
+    <h2>Fonts</h2>
     <p>Now that you understand the basic syntax and rules, we can now learn how to adjust various visual aspects of our elements, such as fonts, colors, and background images.</p>
     <p>By default, browsers will render text with elements using a font from the Times Roman family. This is a
       <a href="https://www.fonts.com/content/learning/fontology/level-1/type-anatomy/serif-vs-sans-for-text-in-print">serifed</a> font, which looks good when printed on paper, but doesn't work as well for small text on screens. Most web sites these days use
@@ -274,7 +274,7 @@ body {
 &lt;/head&gt;</code></pre>
     <p>Note the extra weight options at the end of the URL.</p>
     <p>Each weight and typeface increases the size of the font file that must be downloaded from Google's font servers, which increases the download time, so choose only the ones you really need for the page.</p>
-    <h2 id="sec-colors">Colors</h2>
+    <h2>Colors</h2>
     <p>In the examples above, I used color names like
       <code>red</code> and
       <code>yellow</code>. Although these are supported in CSS, most professional developers don't use them because they don't capture the full range of available colors. Instead, we use a hexadecimal representation of a numeric color value, like
@@ -318,7 +318,7 @@ body {
     <p>To experiment with CSS color values and build color palettes, check out the amazing
       <a href="https://color.adobe.com">Adobe Color CC tool</a>. You can
       <a href="https://color.adobe.com/explore/newest/">explore</a> ready-made color palettes, or design your own. You can also upload a photo and let the tool design a color palette for you based on the colors in the photo (click the camera icon on the top-right).</p>
-    <h2 id="sec-backgroundimages">Background Images</h2>
+    <h2>Background images</h2>
     <p>You can set both the foreground and background color of an element, but it's often a cool effect to use an image as the background instead of a solid color. CSS supports this via the
       <code>background-image</code> property:</p>
     <pre><code class="css language-css">header {
@@ -328,7 +328,7 @@ body {
       <code>url()</code>. Typically this will be a relative path to an image file in your project, and the path should tell the browser how to get from this CSS file to the image. For example, say your CSS file was in a
       <code>css</code> sub-folder, and the image was in another sub-folder named
       <code>img</code> at the same level, like so:</p>
-    <pre><code>myproject/
+    <pre><code class="language-bash">myproject/
 |-- index.html
 |-- css/
 |   |-- styles.css
@@ -355,12 +355,12 @@ body {
     background-position: center;
 }</code></pre>
     <p>For more details, see the CSS reference pages on
-      <a href="http://www.w3schools.com/cssref/pr_background-image.asp">background-image</a>,
-      <a href="http://www.w3schools.com/cssref/css3_pr_background-size.asp">background-size</a>, and
-      <a href="http://www.w3schools.com/cssref/pr_background-position.asp">background-position</a>.</p>
-    <h2 id="sec-measurementunits">Measurement Units</h2>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-image">background-image</a>,
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-size">background-size</a>, and
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-position">background-position</a>.</p>
+    <h2>Measurement units</h2>
     <p>Before we discuss the last core concept, we need to take a slight digression into CSS units. Many CSS properties that affect the size of things can be specified in
-      <a href="http://www.w3schools.com/cssref/css_units.asp">one or more units</a>. CSS supports several absolute units, as well as several relative units.</p>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/length">one or more units</a>. CSS supports several absolute units, as well as several relative units.</p>
     <p>The absolute units are as follows:</p>
     <table class="table">
       <thead>
@@ -431,9 +431,9 @@ body {
     </table>
     <p>Absolute units are best for things you want to be consistent across devices (e.g., font size, or maximum width of some content). Relative units are best for things you want to adjust based on context (the width of a column in a multi-column layout, or the relative font size of an
       <code>&lt;h1&gt;</code> compared to the base font).</p>
-    <h2 id="sec-theboxmodel">The Box Model</h2>
+    <h2>The box model</h2>
     <p>These measurement units are used primarily to adjust the size and layout of elements on the page. Every HTML element in your document creates a box on the page, inside of which the browser displays the element's content. The default widths and heights of these boxes are determined by their content and a few simple rules, but you can adjust these dimensions using various CSS properties.</p>
-    <h3 id="sec-blockvsinlinedisplay">Block vs Inline Display</h3>
+    <h3>Block vs inline display</h3>
     <p>Most HTML elements will be displayed as a
       <strong>block</strong> by default. Block elements create a line break before and after, they stretch to be as wide as their parent element, and they stretch to be as high as they need to be to show their content without clipping or internal scroll bars. Elements that are displayed as blocks by default include
       <code>p</code>,
@@ -461,7 +461,7 @@ body {
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         <span class="shaded">This is an inline element.</span> Quod nesciunt ratione facilis blanditiis, molestiae iste dignissimos totam quasi quis ipsum temporibus, alias minus mollitia odit sunt, quisquam impedit eius unde!</p>
     </blockquote>
-    <h3 id="sec-adjustingwidthandheight">Adjusting Width and Height</h3>
+    <h3>Adjusting width and height</h3>
     <p>You can adjust the default width and height of block elements using the
       <code>width</code> and
       <code>height</code> CSS properties, but you need to careful when doing so. If your element contains content, you should adjust only the
@@ -478,7 +478,7 @@ body {
       <code>max-width</code> to
       <code>1170px</code> will allow the element to grow in width up to, but not beyond,
       <code>1170px</code>.</p>
-    <h3 id="sec-marginsbordersandpadding">Margins, Borders, and Padding</h3>
+    <h3>Margins, borders, and padding</h3>
     <p>Elements displayed as blocks can also have a margin, border, and padding. Margins push elements away from the other elements that are next to them, letting the background color of the
       <em>parent</em> element shine through the gap. </p>
     <p><img src="img/margins.png" alt="margins diagram" /></p>
@@ -487,10 +487,10 @@ body {
       <em>current</em> element shine through the gap.</p>
     <p><img src="img/padding.png" alt="padding diagram" /></p>
     <p>By default, elements don't have any visible borders, but you can make them visible by setting their
-      <a href="http://www.w3schools.com/cssref/pr_border-color.asp">border-color</a>,
-      <a href="http://www.w3schools.com/cssref/pr_border-width.asp">border-width</a>, and
-      <a href="http://www.w3schools.com/cssref/pr_border-style.asp">border-style</a> (solid, dashed, dotted, etc.) properties.</p>
-    <h3 id="sec-horizontallycenteringconstrainedwidthelements">Horizontally Centering Constrained-Width Elements</h3>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color">border-color</a>,
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-width">border-width</a>, and
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style">border-style</a> (solid, dashed, dotted, etc.) properties.</p>
+    <h3>Horizontally centering constrained-width llements</h3>
     <p>If you constrain the width of an element, it will remain on the left side of its parent element. To make it horizontally centered instead, you can set the left and right margins to
       <code>auto</code>. This will cause the browser to horizontally center the element within its parent element.</p>
     <pre><code class="css language-css">.container {
@@ -504,7 +504,7 @@ body {
       <code>margin-left</code> and
       <code>marging-right</code> settings ensure that the text remains horizontally centered within the parent element, even though the text itself will remain left-aligned.</p>
     <p>For example, this main text in this tutorial is inside an element that uses a rule very similar to the one above. Try stretching the browser window wide and notice how the line length stays constrained, but the text block remains horizontally centered on the page.</p>
-    <h2 id="sec-conclusion">Conclusion</h2>
+    <h2>Conclusion</h2>
     <p>CSS is a very powerful language that gives us total control over the appearance of our pages. We've only scratched the surface in this tutorial. If you're wanting to learn more, consult these resources:</p>
   </main>
 </template>
