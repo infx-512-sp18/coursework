@@ -11,16 +11,14 @@
     <p>There are several popular CSS frameworks to choose from. All of them provide beautiful formatting of HTML elements, pre-defined responsive multi-column layout grids that work on all browsers, and all the common UI elements you see on most web sites.</p>
     <h3 id="sec-bootstrap">Bootstrap</h3>
     <p>The most commonly-used CSS framework on the web is
-      <a href="http://getbootstrap.com/">Bootstrap</a>. It was originally created at Twitter to enforce some consistency amongst their internal tools, but after they released it as an open-source project in 2011, it became
+      <a href="https://getbootstrap.com/">Bootstrap</a>. It was originally created at Twitter to enforce some consistency amongst their internal tools, but after they released it as an open-source project in 2011, it became
       <em>very</em> widely used. That wide use has benefits and drawbacks: it's very well tested, documented, and supported, but it's also so prevalent that it's default look has become cliché. Thankfully, it's rather easy to
-      <a href="http://getbootstrap.com/customize/">customize Bootstrap</a> with your own fonts, colors, sizing, etc.</p>
-    <p>Bootstrap is currently working on a
-      <a href="http://v4-alpha.getbootstrap.com/">new version 4</a> that promises to offer a flexbox-based responsive grid layout, as well as a set of officially-supported themes.</p>
+      <a href="https://getbootstrap.com/docs/4.0/getting-started/theming/">customize Bootstrap</a> with your own fonts, colors, sizing, etc.</p>
     <h3 id="sec-foundation">Foundation</h3>
     <p>Bootstrap's chief rival is
-      <a href="http://foundation.zurb.com/">Foundation</a>. It has the reputation of being more ahead-of-the-curve than Bootstrap, introducing new features sooner. They were the first framework to use a responsive mobile-first design, and their new version 6 already offers a
-      <a href="http://foundation.zurb.com/sites/docs/flex-grid.html">flexbox-based responsive grid</a>. Foundation has mostly the same UI elements as Bootstrap, but with a different default look at feel, which can also be
-      <a href="http://foundation.zurb.com/sites/download.html/#customizeFoundation">customized</a> to match your own branding.</p>
+      <a href="https://foundation.zurb.com/">Foundation</a>. It has the reputation of being more ahead-of-the-curve than Bootstrap, introducing new features sooner. They were the first framework to use a responsive mobile-first design, and their new version 6 already offers a
+      <a href="https://foundation.zurb.com/sites/docs/flex-grid.html">flexbox-based responsive grid</a>. Foundation has mostly the same UI elements as Bootstrap, but with a different default look at feel, which can also be
+      <a href="https://foundation.zurb.com/sites/download.html/#customizeFoundation">customized</a> to match your own branding.</p>
     <h3 id="sec-materialdesignlite">Material Design Lite</h3>
     <p>Bootstrap and Foundation defined their own visual design language, but if you are a fan of Google's
       <a href="https://material.google.com/">Material Design</a> instead, there are a few CSS frameworks based upon that. The official Google implementation is known as

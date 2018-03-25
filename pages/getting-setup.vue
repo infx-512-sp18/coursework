@@ -46,6 +46,10 @@ $ brew install node</code></pre>
 
     <h2>Customizing VS Code</h2>
 
+    <p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/k7faQIXfzS4?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </p>
+
     <p>These extensions will help you as a developer get the most out of Visual Studio Code.</p>
 
     <ul>

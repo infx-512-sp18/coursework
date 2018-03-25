@@ -2,7 +2,9 @@
   <main id="main" tabindex="-1">
     <h1>Emmet autocompletion</h1>
 
-    [Video]
+    <p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/1gMjTVlMpHQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </p>
 
     <h2>Resources</h2>
     <ul>

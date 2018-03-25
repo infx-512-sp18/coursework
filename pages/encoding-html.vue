@@ -2,6 +2,10 @@
   <main id="main" tabindex="-1">
     <h1>Encoding in HTML</h1>
 
+    <p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/CGM_FBLocag?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </p>
+
     <h2>History of HTML</h2>
 
     <ul>

@@ -1,6 +1,10 @@
 <template>
   <main id="main" tabindex="-1">
     <h1>Managing files tutorial</h1>
+
+    <p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/kynMtfZc_0I?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </p>
     <p>Website consist of many files, folders and assets. These files are living documents that change over time.</p>
     <h2>Version control systems</h2>
     <ul>
@@ -175,6 +179,10 @@
     <p>Often code is not created in isolation, especially if it is open source. Some time you want to work on a feature or some part of the code that may not work out and need </p>
 
     <h3>Branching and Merging</h3>
+
+    <p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/yMq8dadb00Q?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </p>
 
     <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-desktop-branch.gif')" src="~/assets/images/placeholder.gif" alt="Animation of creating a branch in GitHub Desktop"></p>
 

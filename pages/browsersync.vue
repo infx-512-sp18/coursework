@@ -2,11 +2,15 @@
   <main id="main" tabindex="-1">
     <h1>Auto refreshing with Browsersync</h1>
 
+    <p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/KnTDM-jthOI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </p>
+
     <h2>Installation</h2>
 
     <p>Ensure
       <code>node</code> and
-      <code>npm</code> are installed. Instuctions are in the
+      <code>npm</code> are installed. Instructions are in the
       <a href="/getting-setup">Getting setup</a> guide.
     </p>
 
@@ -27,7 +31,7 @@ $ npm --version
 
     <h2>Starting a server</h2>
 
-    <p>The power of Brwosersync is it can start a local webserver (will be important later in this course) and watch for file changes. When ever you save a file, it will automatically update the preview of your webpage with those changes.</p>
+    <p>The power of Browsersync is it can start a local webserver (will be important later in this course) and watch for file changes. When ever you save a file, it will automatically update the preview of your webpage with those changes.</p>
 
     <p>
       <pre><code class="language-bash">$ browser-sync start --server --files "*.html, css/*.css"</code></pre>
