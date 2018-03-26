@@ -12,10 +12,10 @@ module.exports = {
     ],
     link: [
       {
-        rel: 'icon', type: 'image/x-icon', href: '/coursework/favicon.ico'
+        rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'
       },
       {
-        rel: 'stylesheet', href: '/coursework/css/prism.css'
+        rel: 'stylesheet', href: '/css/prism.css'
       },
       {
         rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i'
@@ -23,7 +23,7 @@ module.exports = {
     ],
     script: [
       {
-        src: '/coursework/js/prism.js',
+        src: '/js/prism.js',
       }
     ]
   },
@@ -42,6 +42,12 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  /*
+  ** Plugins
+  */
+  plugins: [
+    { src: '@/plugins/ga.js', ssr: false }
+  ],
   /*
   ** Build configuration
   */
