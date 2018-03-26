@@ -144,7 +144,7 @@
 
     <p>Writing a good commit message is an art, being concise while still explaining what changed and why is important. The
       <code>Summary</code>, the first line, should complete this sentence: "if applied, this commit will
-      <code>Add instructions to the README</code>." The emphasised words in this sentence will make an appropriate commit message.</p>
+      <code>Add instructions to the README</code>." The emphasized words in this sentence will make an appropriate commit message.</p>
 
     <p>The
       <code>Description</code> is a larger area to explain in more detail why the change was needed, any side effects the code will produce and link to any issues it resolves or where the change was requested. This description area should be formatted in Markdown.
@@ -160,7 +160,7 @@
 
     <h3>Push to origin (Github)</h3>
 
-    <p>After making one or more commits is it good practice to push the changes to the centeral GIT repository (In our case, GitHub). This will publish all the changes so other developers can pull them down and work off the updated code.</p>
+    <p>After making one or more commits is it good practice to push the changes to the central GIT repository (In our case, GitHub). This will publish all the changes so other developers can pull them down and work off the updated code.</p>
 
     <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-desktop-push.gif')" src="~/assets/images/placeholder.gif" alt="Animation of how to push code with GitHub Desktop"></p>
 
@@ -172,7 +172,7 @@
 
     <h3>Repeat</h3>
 
-    <p>This process can seem a bit straining at first, especially when coming from the process in desktop application or Google Web apps, where changes are saved in real time or without comments. After going through this course you will have an understanding of why this process is important. Thinking of changes to a codebase as "snapshots" in time allows you as a developer to isolate a bundle of changes (HTML, CSS, Images, etc) around a description and moving between each state in the code changes all the nessesary files at once.</p>
+    <p>This process can seem a bit straining at first, especially when coming from the process in desktop application or Google Web apps, where changes are saved in real time or without comments. After going through this course you will have an understanding of why this process is important. Thinking of changes to a codebase as "snapshots" in time allows you as a developer to isolate a bundle of changes (HTML, CSS, Images, etc) around a description and moving between each state in the code changes all the necessary files at once.</p>
 
     <h2>Working collaboratively</h2>
 

@@ -490,7 +490,7 @@ body {
       <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color">border-color</a>,
       <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-width">border-width</a>, and
       <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style">border-style</a> (solid, dashed, dotted, etc.) properties.</p>
-    <h3>Horizontally centering constrained-width llements</h3>
+    <h3>Horizontally centering constrained-width elements</h3>
     <p>If you constrain the width of an element, it will remain on the left side of its parent element. To make it horizontally centered instead, you can set the left and right margins to
       <code>auto</code>. This will cause the browser to horizontally center the element within its parent element.</p>
     <pre><code class="css language-css">.container {
@@ -502,7 +502,7 @@ body {
       <code>1170px</code> (about 12 inches), even on very wide screens. If the screen is wider than
       <code>1170px</code>, the
       <code>margin-left</code> and
-      <code>marging-right</code> settings ensure that the text remains horizontally centered within the parent element, even though the text itself will remain left-aligned.</p>
+      <code>margin-right</code> settings ensure that the text remains horizontally centered within the parent element, even though the text itself will remain left-aligned.</p>
     <p>For example, this main text in this tutorial is inside an element that uses a rule very similar to the one above. Try stretching the browser window wide and notice how the line length stays constrained, but the text block remains horizontally centered on the page.</p>
     <h2>Conclusion</h2>
     <p>CSS is a very powerful language that gives us total control over the appearance of our pages. We've only scratched the surface in this tutorial. If you're wanting to learn more, consult these resources:</p>

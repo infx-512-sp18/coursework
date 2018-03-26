@@ -45,7 +45,7 @@
       <li>
         <strong>CSS:</strong> Presentation</li>
       <li>
-        <strong>Javacript:</strong> Interactivity</li>
+        <strong>Javascript:</strong> Interactivity</li>
     </ul>
 
     <h2>Folder structure</h2>
@@ -266,7 +266,7 @@
     <h3>Headings</h3>
     <p>The
       <code>&lt;h1&gt;</code> element from above is a top-level heading. It is not limited to one per page, but should be used for the page's overall title. HTML defines up to six levels of headings, and you can use those levels to define an outline of your document.</p>
-    <blockquote>"Sole purpose [of headings] is todesignate a hierarchy of headline importance, so that both human readers and automated search engines can look at a document and easily determine its information structure."
+    <blockquote>"Sole purpose [of headings] is to designate a hierarchy of headline importance, so that both human readers and automated search engines can look at a document and easily determine its information structure."
       <cite>
         ~
         <a href="https://webaim.org/techniques/semanticstructure/">webaim.org</a>
