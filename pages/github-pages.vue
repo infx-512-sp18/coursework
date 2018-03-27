@@ -91,6 +91,7 @@ export default {
     this.images = this.$el.querySelectorAll('img.lazy-load')
 
     window.addEventListener('scroll', debounce(this.checkImage))
+    window.addEventListener('load', this.checkImage)
   },
   methods: {
     checkImage: function() {
