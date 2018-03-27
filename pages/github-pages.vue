@@ -27,7 +27,7 @@
       <code>index.html</code> page</h3>
 
     <p>
-      <img class="lazy-load" :data-src="require('~/assets/github-pages/gh-pages-create-index.gif')" src="~/assets/images/placeholder.gif" alt="Animation of creating an index HTML page">
+      <img src="~/assets/github-pages/gh-pages-create-index.gif" alt="Animation of creating an index HTML page">
     </p>
 
     <h3>Push the master branch to GitHub</h3>
@@ -91,7 +91,6 @@ export default {
     this.images = this.$el.querySelectorAll('img.lazy-load')
 
     window.addEventListener('scroll', debounce(this.checkImage))
-    window.addEventListener('load', this.checkImage)
   },
   methods: {
     checkImage: function() {
