@@ -44,6 +44,31 @@ $ brew cask install visual-studio-code
 $ brew cask install github
 $ brew install node</code></pre>
 
+    <h2 id="troubleshooting">Troubleshooting</h2>
+
+    <h3>GIT username or email address error</h3>
+
+    <p>If you get this error when pushing to GitHub Desktop</p>
+
+    <p><img src="~/assets/getting-setup/github-auth-error.png" alt="Screenshot of GIT authentication error"></p>
+
+    <p>Open a Terminal (
+      <a href="https://www.wikihow.com/Open-a-Terminal-Window-in-Mac">instructions</a>) or Command Prompt (
+      <a href="https://www.digitalcitizen.life/7-ways-launch-command-prompt-windows-7-windows-8">instructions</a>) and type the following commands. Replace
+      <code>{First name}</code>,
+      <code>{Last name}</code>,
+      <code>{email}</code> with your name and email address you use to sign up for GitHub.com.</p>
+
+    <p>
+      <pre><code class="language-bash">$ git config --global user.email "{email}"
+$ git config --global user.name "{First name} {Last name}"</code></pre>
+    </p>
+
+    <p>
+      <em>Do not include the dollar sign (
+        <code>$</code>) when copy/pasting into the command line.</em>
+    </p>
+
     <h2>Customizing VS Code</h2>
 
     <p>
