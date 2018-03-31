@@ -89,11 +89,27 @@
 
     <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-app-clone-repo.png')" src="~/assets/images/placeholder.gif" alt="Screenshot of clone repository dialog in GitHub app"></p>
 
+    <h3>If the "Open in GitHub Desktop" button doesn't work</h3>
+
+    <p>On some computers, the "Open in GitHub Desktop" button doesn't work from the browser. You can clone a repository from the GitHub Desktop application itself. I've included a video to demonstrate the process.</p>
+
+    <p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/o-I2Pjn3Atk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </p>
+
     <h3>Open repo in editor</h3>
 
     <p>Once the code has been downloaded to your computer, it is time to open VSCode and open that folder.</p>
 
-    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/vscode-open-repo.png')" src="~/assets/images/placeholder.gif" alt="Screenshot of Visual Studio Code"></p>
+    <p>
+      <em>Note: If you see a
+        <code>.git</code> folder in the repo, that folder contains the meta data for the repository, not your actual files.</em>
+    </p>
+
+    <p><img class="lazy-load" :data-src="require('~/assets/managing-files/vscode-folder.gif')" src="~/assets/images/placeholder.gif" alt="Animation of opening a folder Visual Studio Code"></p>
+
+    <p>Choose the folder you cloned,
+      <code>/Users/{username}/Sites/infx-512/{repo-name}</code>.</p>
 
     <p>You will notice VSCode does have the ability to work with the repository to see differences, commit code and push it to GitHub, like the GitHub Desktop app. We will be using the GitHub Desktop app moving forward in this course, because it is a dedicated app that is clear what is going on with the repo.</p>
     <p>here are many applications that work with GIT repositories, individuals and companies standardize on an application that makes them most productive.</p>
@@ -203,6 +219,8 @@
     <p><img class="lazy-load" :data-src="require('~/assets/managing-files/github-fetch-changes.gif')" src="~/assets/images/placeholder.gif" alt="Animation of fetching new changes from GitHub"></p>
 
     <h3>Keep Practicing</h3>
+
+    <p>This is a great time to experiment with the process of changing code, committing the code through the GitHub Desktop application and pushing it to the server. The number of commits you have in a repository is not important. At this point it is important to get the process down, as all future assignments will require changes to code inside a repository that is pushed to GitHub.</p>
 
     <h2>Additional resources</h2>
     <ul>
