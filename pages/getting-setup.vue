@@ -99,6 +99,15 @@ $ git config --global user.name "{First name} {Last name}"</code></pre>
       <li>
         <a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag">Auto rename tag</a>
       </li>
+      <li>
+        <a href="https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer">Bracket Pair Colorizer</a>
+      </li>
+      <li>
+        <a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker">Spelling Checker</a>
+      </li>
+      <li>
+        <a href="https://marketplace.visualstudio.com/items?itemName=SirTori.indenticator">Indenticator</a>
+      </li>
     </ul>
   </main>
 </template>

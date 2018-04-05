@@ -2,6 +2,10 @@
   <main id="main" tabindex="-1">
     <h1>Adding CSS style</h1>
 
+    <p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Yas0jTMHiSA?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </p>
+
     <p>CSS (Cascading Style Sheets) is a declarative language that we use to alter the appearance of our HTML pages. A CSS file (known as a
       <strong>stylesheet</strong>) consists of a set of formatting rules. The browser interprets and applies these rules when it renders your web page.</p>
     <p>CSS is immensely powerful and flexible. You can control nearly every aspect of an element's appearance, including its overall placement on the page. To give you some idea of just how much control you have, check out the
@@ -481,11 +485,15 @@ body {
     <h3>Margins, borders, and padding</h3>
     <p>Elements displayed as blocks can also have a margin, border, and padding. Margins push elements away from the other elements that are next to them, letting the background color of the
       <em>parent</em> element shine through the gap. </p>
-    <p><img src="img/margins.png" alt="margins diagram" /></p>
+    <p><img class="lazy-load" :data-src="require('~/assets/adding-css/boxmodel.gif')" src="~/assets/images/placeholder.gif" alt="Diagram to show margins, borders and padding" /></p>
+    <p>
+      <em>Source:
+        <a href="https://en.wikipedia.org/wiki/File:Boxmodel.gif">https://en.wikipedia.org/wiki/File:Boxmodel.gif</a>
+      </em>
+    </p>
     <p>Browsers will typically overlap margins of similar elements. For example, if you have two paragraphs on top of one another, and you set margin-bottom on the first and margin-top on the second, most browsers will overlap those margins and just use the larger of the two. But if the elements are different, it will typically add the margins together, creating a gap equal to the sum of the two margin values.</p>
     <p>Padding, on the other hand, adds space between the element's border and its content, letting the background color of the
       <em>current</em> element shine through the gap.</p>
-    <p><img src="img/padding.png" alt="padding diagram" /></p>
     <p>By default, elements don't have any visible borders, but you can make them visible by setting their
       <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color">border-color</a>,
       <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-width">border-width</a>, and
@@ -506,16 +514,65 @@ body {
     <p>For example, this main text in this tutorial is inside an element that uses a rule very similar to the one above. Try stretching the browser window wide and notice how the line length stays constrained, but the text block remains horizontally centered on the page.</p>
     <h2>Conclusion</h2>
     <p>CSS is a very powerful language that gives us total control over the appearance of our pages. We've only scratched the surface in this tutorial. If you're wanting to learn more, consult these resources:</p>
+
+    <h2>Resources</h2>
+    <ul>
+      <li>
+        <a href="https://medium.com/actualize-network/modern-css-explained-for-dinosaurs-5226febe3525">Article: Modern CSS Explained For Dinosaurs</a>
+      </li>
+      <li>
+        <a href="https://cdn.makeawebsitehub.com/wp-content/uploads/2016/07/css3-mega-cheat-sheet-A4.pdf">CSS cheat sheet</a> (pdf)</li>
+      <li>
+        <a href="http://htmlcheatsheet.com/css/">Interactive CSS cheat sheet</a>
+      </li>
+    </ul>
   </main>
 </template>
 
 <script>
+function debounce(func, wait = 20, immediate = true) {
+  var timeout
+  return function() {
+    var context = this,
+      args = arguments
+    var later = function() {
+      timeout = null
+      if (!immediate) func.apply(context, args)
+    }
+    var callNow = immediate && !timeout
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+    if (callNow) func.apply(context, args)
+  }
+}
 export default {
   head: {
     title: 'Adding CSS style'
   },
+  data: function() {
+    return {
+      images: []
+    }
+  },
   mounted() {
     Prism.highlightAll()
+
+    this.images = this.$el.querySelectorAll('img.lazy-load')
+
+    window.addEventListener('scroll', debounce(this.checkImage))
+  },
+  methods: {
+    checkImage: function() {
+      this.images.forEach(loadImage => {
+        const scrollPosition = window.scrollY + window.innerHeight
+        const loadPosition = loadImage.offsetTop - 200
+
+        if (!loadImage.classList.contains('loaded') && scrollPosition > loadPosition) {
+          loadImage.src = loadImage.dataset.src
+          loadImage.classList.add('loaded')
+        }
+      })
+    }
   }
 }
 </script>
