@@ -369,7 +369,7 @@ body {
     <table class="table">
       <thead>
         <tr>
-          <th>Unit</th>
+          <th width="10%">Unit</th>
           <th>Meaning</th>
         </tr>
       </thead>
@@ -404,7 +404,7 @@ body {
     <table class="table">
       <thead>
         <tr>
-          <th>Unit</th>
+          <th width="10%">Unit</th>
           <th>Meaning</th>
         </tr>
       </thead>
@@ -450,7 +450,7 @@ body {
       <code>article</code>,
       <code>footer</code>,
       <code>aside</code>, and many more. For example:</p>
-    <blockquote>
+    <blockquote class="bg-grey p-3 m-3">
       <p class="shaded">This is a block element: it creates a line break before and after, stretches as wide as its parent element, as stretches as high as it needs in order to show its content. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam labore non, distinctio dolorum ducimus ad cum quo voluptatum facere, quas alias ex modi quidem, et in, suscipit debitis quaerat recusandae.</p>
     </blockquote>
     <p>Other HTML elements will be displayed as
@@ -463,7 +463,7 @@ body {
       <code>abbr</code>, and several more. For example:</p>
     <blockquote>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        <span class="shaded">This is an inline element.</span> Quod nesciunt ratione facilis blanditiis, molestiae iste dignissimos totam quasi quis ipsum temporibus, alias minus mollitia odit sunt, quisquam impedit eius unde!</p>
+        <span class="bg-grey">This is an inline element.</span> Quod nesciunt ratione facilis blanditiis, molestiae iste dignissimos totam quasi quis ipsum temporibus, alias minus mollitia odit sunt, quisquam impedit eius unde!</p>
     </blockquote>
     <h3>Adjusting width and height</h3>
     <p>You can adjust the default width and height of block elements using the

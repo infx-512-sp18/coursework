@@ -8,7 +8,7 @@
 /** ------------------------------------------------------------
   ##  CUSTOM CLASSES
   --------------------------------------------------------- */
-  a.skip {
+a.skip {
     left:-999px;
     position:absolute;
     top:auto;
@@ -52,4 +52,12 @@ main pre {
 main code {
   background-color: config('colors.grey-light');
   @apply .px-1 .rounded-sm
+}
+
+.table th {
+  @apply .text-left
+}
+.table th, .table td {
+  border-bottom: 1px solid #eee;
+  @apply .p-2
 }
