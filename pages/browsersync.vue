@@ -34,7 +34,7 @@ $ npm --version
     <p>The power of Browsersync is it can start a local webserver (will be important later in this course) and watch for file changes. When ever you save a file, it will automatically update the preview of your webpage with those changes.</p>
 
     <p>
-      <pre><code class="language-bash">$ browser-sync start --server --files "*.html, css/*.css"</code></pre>
+      <pre><code class="language-bash">$ browser-sync start --server --files="**/*"</code></pre>
     </p>
 
     <h2>Visit the local webserver</h2>
