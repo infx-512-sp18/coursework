@@ -417,7 +417,11 @@ body {
           <td>rem</td>
           <td>the height of the root element's font (i.e., the font used on the root
             <code>html</code> or
-            <code>body</code> element)</td>
+            <code>body</code> element). To calculate from the base size to
+            <code>rem</code> it would be based on percentage, but in decimal format. So 100% is
+            <code>1.0rem</code> 150% is
+            <code>1.5rem</code> and 200% is
+            <code>2.0rem</code>.</td>
         </tr>
         <tr>
           <td>%</td>
